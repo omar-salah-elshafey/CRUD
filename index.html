@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>CRUD</h1>
+            <h4>product management system</h4>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup="calcTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="calcTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="calcTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="calcTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">Create</button>
+        </div>
+        <div class="output">
+            <div class="searchContainer">
+                <input type="text" id="search" placeholder="search">
+                <div class="btnsearch">
+                    <button id="SearchbyTitle">Search by Title</button>
+                    <button id="SearchbyCategory">Search by Category</button>
+                </div>
+                
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>count</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="products-container">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
